@@ -1,0 +1,424 @@
+<!-- title: BSN(빌사남) 그룹 -->
+<!-- modified: 2026-04-14T04:49:39 -->
+
+<!-- wp:html -->
+<style>
+.bsn-root{
+  --navy:#0B2545; --navy-2:#13315C; --royal:#1E40AF; --blue:#3B82F6; --sky:#BFDBFE;
+  --ink:#0B1220; --body:#334155; --muted:#64748B; --line:#E2E8F0; --bg:#F8FAFC;
+  font-family:'Pretendard','Noto Sans KR',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color:var(--ink); line-height:1.75; font-size:17px; letter-spacing:-.01em;
+  margin:0; padding:0; background:#fff;
+  max-width:100%; overflow-x:hidden;
+}
+.bsn-root *{box-sizing:border-box}
+.bsn-wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+.bsn-eyebrow{font-size:12px;letter-spacing:.3em;color:var(--royal);font-weight:800;text-transform:uppercase;margin-bottom:18px}
+.bsn-h2{font-size:clamp(30px,3.2vw,46px);font-weight:800;letter-spacing:-.025em;margin:0 0 20px;color:var(--ink);line-height:1.25}
+.bsn-lead{font-size:18px;color:var(--body);line-height:1.8;margin:0}
+.bsn-section{padding:120px 0}
+
+/* ========== HERO ========== */
+.bsn-hero{
+  position:relative; color:#fff; padding:180px 0 140px;
+  margin:0; padding-left:0; padding-right:0;
+  background:
+    linear-gradient(115deg, rgba(11,37,69,.92) 0%, rgba(19,49,92,.78) 55%, rgba(30,64,175,.55) 100%),
+    url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=2000&q=80') center/cover;
+}
+.bsn-hero-inner{max-width:1240px;margin:0 auto;padding:0 28px;position:relative}
+.bsn-overline{display:inline-block;font-size:12px;letter-spacing:.35em;color:var(--sky);font-weight:700;margin-bottom:28px;padding:8px 18px;border:1px solid rgba(191,219,254,.5);border-radius:999px}
+.bsn-hero h1{font-size:clamp(40px,5.6vw,72px);font-weight:800;line-height:1.15;margin:0 0 28px;letter-spacing:-.03em;color:#fff;max-width:900px}
+.bsn-hero h1 em{font-style:normal;color:var(--sky)}
+.bsn-hero .sub{font-size:clamp(17px,1.5vw,21px);color:#E2E8F0;max-width:620px;margin:0 0 44px;line-height:1.75;font-weight:400}
+.bsn-cta{display:flex;gap:14px;flex-wrap:wrap}
+.bsn-btn{display:inline-flex;align-items:center;gap:8px;padding:18px 36px;border-radius:10px;font-weight:700;text-decoration:none;font-size:16px;transition:transform .15s,box-shadow .15s;cursor:pointer;border:none;font-family:inherit}
+.bsn-btn-primary{background:#fff;color:var(--navy)}
+.bsn-btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(0,0,0,.25)}
+.bsn-btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
+.bsn-btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+/* ========== STATS ========== */
+.bsn-stats{background:#fff;padding:84px 0;border-bottom:1px solid var(--line)}
+.bsn-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px}
+.bsn-stat{position:relative;padding-left:28px}
+.bsn-stat::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;background:linear-gradient(180deg,var(--royal),var(--blue));border-radius:2px}
+.bsn-stat .n{font-size:clamp(34px,3.6vw,52px);font-weight:800;color:var(--navy);letter-spacing:-.025em;line-height:1;white-space:nowrap}
+.bsn-stat .n .u{font-size:.55em;color:var(--royal);margin-left:4px}
+.bsn-stat .l{margin-top:12px;font-size:15px;color:var(--body);font-weight:600}
+@media(max-width:860px){.bsn-stats-grid{grid-template-columns:repeat(2,1fr);gap:40px}}
+
+/* ========== ABOUT (horizontal) ========== */
+.bsn-about-top{margin-bottom:48px}
+.bsn-about{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:64px;align-items:start}
+.bsn-about-img{border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:#E2E8F0 center/cover;box-shadow:0 40px 80px -30px rgba(11,37,69,.35);position:sticky;top:40px}
+.bsn-about-text{columns:1;font-size:17px;color:var(--body);line-height:1.95}
+.bsn-about-text p{margin:0 0 22px}
+.bsn-about-text p strong{color:var(--ink);font-weight:700}
+.bsn-quote{margin-top:40px;padding:32px 36px;background:var(--bg);border-left:4px solid var(--royal);border-radius:6px;font-size:18px;color:var(--ink);font-weight:500;line-height:1.8}
+.bsn-quote cite{display:block;margin-top:14px;font-size:14px;color:var(--muted);font-style:normal;font-weight:700}
+@media(max-width:960px){.bsn-about{grid-template-columns:1fr;gap:48px}.bsn-about-img{aspect-ratio:16/10}}
+
+/* ========== DATA·AI ========== */
+.bsn-data{background:linear-gradient(180deg,#F1F5F9 0%,#fff 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bsn-data-top{margin-bottom:40px}
+.bsn-data-header{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:60px}
+.bsn-data-img{border-radius:20px;overflow:hidden;aspect-ratio:16/10;background:#E2E8F0 center/cover;box-shadow:0 30px 60px -25px rgba(11,37,69,.3)}
+.bsn-data-grid{display:flex;flex-direction:column;gap:20px}
+.bsn-data-card{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px 40px;transition:transform .2s,box-shadow .2s}
+.bsn-data-card:hover{transform:translateX(4px);box-shadow:0 22px 44px -16px rgba(11,37,69,.18);border-color:var(--royal)}
+.bsn-data-card .ic{width:60px;height:60px;border-radius:14px;background:linear-gradient(135deg,#1E40AF,#3B82F6);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:19px;flex-shrink:0}
+.bsn-data-card .body h3{font-size:21px;font-weight:800;margin:0 0 8px;color:var(--ink);letter-spacing:-.01em}
+.bsn-data-card .body p{font-size:16px;color:var(--body);margin:0;line-height:1.75}
+@media(max-width:960px){.bsn-data-header{grid-template-columns:1fr;gap:36px}.bsn-data-card{grid-template-columns:1fr;text-align:left}}
+
+/* ========== SERVICES ========== */
+.bsn-svc-head{max-width:960px;margin-bottom:56px}
+.bsn-svc-head .bsn-lead{margin-top:16px;max-width:780px}
+.bsn-services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.bsn-svc{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:18px;padding:36px 40px;position:relative;overflow:hidden;transition:all .25s}
+.bsn-svc::before{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:linear-gradient(180deg,var(--royal),var(--blue));transform:scaleY(0);transform-origin:top;transition:transform .3s}
+.bsn-svc:hover{transform:translateY(-4px);box-shadow:0 26px 54px -20px rgba(11,37,69,.22);border-color:var(--royal)}
+.bsn-svc:hover::before{transform:scaleY(1)}
+.bsn-svc .num-wrap{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--royal));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;flex-shrink:0}
+.bsn-svc .num{font-size:12px;font-weight:800;color:var(--royal);letter-spacing:.22em;margin-bottom:10px}
+.bsn-svc h3{font-size:21px;font-weight:800;margin:0 0 10px;color:var(--ink);letter-spacing:-.01em}
+.bsn-svc p{font-size:15.5px;color:var(--body);margin:0;line-height:1.8}
+@media(max-width:960px){.bsn-services{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){.bsn-services{grid-template-columns:1fr}.bsn-svc{grid-template-columns:1fr}}
+
+/* ========== OFFICES (with city images) ========== */
+.bsn-offices{background:var(--navy);color:#fff;padding:120px 28px}
+.bsn-offices-inner{max-width:1240px;margin:0 auto;padding:0 28px}
+.bsn-offices h2{color:#fff}
+.bsn-offices .bsn-lead{color:#CBD5E1}
+.bsn-office-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.bsn-office{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:#0F172A center/cover;transition:transform .3s}
+.bsn-office::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,37,69,.1) 0%,rgba(11,37,69,.9) 100%)}
+.bsn-office:hover{transform:translateY(-6px)}
+.bsn-office .content{position:absolute;left:0;right:0;bottom:0;padding:32px;z-index:2}
+.bsn-office .tag{font-size:11px;letter-spacing:.3em;color:var(--sky);font-weight:800;margin-bottom:10px}
+.bsn-office h3{font-size:26px;font-weight:800;margin:0 0 8px;color:#fff;letter-spacing:-.01em}
+.bsn-office .sub{font-size:14.5px;color:#CBD5E1;margin:0;line-height:1.7}
+@media(max-width:860px){.bsn-office-grid{grid-template-columns:1fr;gap:18px}.bsn-office{aspect-ratio:16/9}}
+
+/* ========== BLOG (horizontal cards) ========== */
+.bsn-blog{background:#fff;padding:120px 0}
+.bsn-blog-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:52px;flex-wrap:wrap}
+.bsn-blog-head-text{max-width:640px}
+.bsn-blog-all{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;font-weight:700;font-size:14.5px;transition:all .15s}
+.bsn-blog-all:hover{border-color:var(--royal);color:var(--royal)}
+.bsn-posts{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.bsn-post{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);transition:transform .2s,box-shadow .2s}
+.bsn-post:hover{transform:translateY(-4px);box-shadow:0 24px 48px -20px rgba(11,37,69,.2);border-color:var(--royal)}
+.bsn-post .img{aspect-ratio:16/10;background:#F1F5F9 center/cover}
+.bsn-post .txt{padding:26px 26px 30px}
+.bsn-post .date{font-size:12.5px;color:var(--muted);letter-spacing:.1em;font-weight:600;margin-bottom:12px}
+.bsn-post h4{font-size:18px;font-weight:700;margin:0 0 10px;color:var(--ink);line-height:1.45;letter-spacing:-.01em}
+.bsn-post p{font-size:14.5px;color:var(--body);margin:0;line-height:1.7;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bsn-post .empty{padding:60px 30px;text-align:center;color:var(--muted);grid-column:1/-1;background:var(--bg);border-radius:16px}
+@media(max-width:960px){.bsn-posts{grid-template-columns:1fr}}
+
+/* ========== CONTACT ========== */
+.bsn-contact{padding:120px 0;background:linear-gradient(180deg,#F8FAFC 0%,#fff 100%);text-align:center}
+.bsn-contact h2{font-size:clamp(30px,3.2vw,46px);font-weight:800;margin:0 auto 20px;color:var(--ink);letter-spacing:-.025em;line-height:1.25;max-width:780px}
+.bsn-contact p{color:var(--body);font-size:18px;margin:0 auto 44px;line-height:1.75;max-width:560px}
+.bsn-contact-cta{display:inline-flex;align-items:center;gap:10px;padding:22px 56px;background:linear-gradient(135deg,#1E40AF,#3B82F6);color:#fff;border-radius:12px;font-weight:800;font-size:17px;text-decoration:none;border:none;cursor:pointer;font-family:inherit;transition:transform .15s,box-shadow .15s;box-shadow:0 14px 36px -10px rgba(30,64,175,.4)}
+.bsn-contact-cta:hover{transform:translateY(-3px);box-shadow:0 22px 44px -10px rgba(30,64,175,.5)}
+
+/* ========== MODAL ========== */
+.bsn-modal{display:none;position:fixed;inset:0;background:rgba(11,18,32,.75);z-index:99999;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+.bsn-modal.open{display:flex}
+.bsn-modal-box{background:#fff;border-radius:22px;max-width:460px;width:100%;padding:48px 40px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.bsn-modal-close{position:absolute;top:18px;right:18px;width:38px;height:38px;border:none;background:#F1F5F9;border-radius:50%;cursor:pointer;font-size:18px;color:var(--body);font-weight:700;display:flex;align-items:center;justify-content:center}
+.bsn-modal-close:hover{background:#E2E8F0}
+.bsn-modal h3{font-size:25px;font-weight:800;margin:0 0 10px;color:var(--ink);text-align:center;letter-spacing:-.02em}
+.bsn-modal .desc{font-size:15px;color:var(--body);text-align:center;margin:0 0 30px;line-height:1.7}
+.bsn-modal-options{display:flex;flex-direction:column;gap:12px}
+.bsn-opt{display:flex;align-items:center;gap:16px;padding:20px 22px;border-radius:13px;text-decoration:none;font-weight:700;font-size:16px;transition:all .15s;border:2px solid transparent}
+.bsn-opt .icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.bsn-opt .lab{display:block;font-size:11px;font-weight:800;letter-spacing:.22em;margin-bottom:2px;opacity:.7}
+.bsn-opt .val{display:block;font-size:17px;font-weight:800}
+.bsn-opt-tel{background:#F8FAFC;color:var(--navy)}
+.bsn-opt-tel:hover{background:#fff;border-color:var(--royal)}
+.bsn-opt-tel .icon{background:var(--navy);color:#fff}
+.bsn-opt-kakao{background:#FEE500;color:#191600}
+.bsn-opt-kakao:hover{background:#FFDE00;transform:translateX(4px)}
+.bsn-opt-kakao .icon{background:#191600;color:#FEE500}
+</style>
+
+<div class="bsn-root">
+
+<!-- ========== HERO ========== -->
+<section class="bsn-hero">
+  <div class="bsn-hero-inner">
+    <span class="bsn-overline">SINCE 2009 · REAL ESTATE GROUP</span>
+    <h1>BSN GROUP.<br>빌딩, 가장 전문적인 <em>파트너</em>.</h1>
+    <p class="sub">데이터와 17년의 전문성으로 움직이는 대한민국 빌딩 거래의 기준. 박리다매가 아닌, 확실한 데이터로 고객의 자산을 지킵니다.</p>
+    <div class="bsn-cta">
+      <button class="bsn-btn bsn-btn-primary" onclick="bsnOpen()">상담 문의 →</button>
+      <a class="bsn-btn bsn-btn-ghost" href="#services">사업 영역 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== STATS ========== -->
+<section class="bsn-stats">
+  <div class="bsn-wrap">
+    <div class="bsn-stats-grid">
+      <div class="bsn-stat"><div class="n">4.3<span class="u">조+</span></div><div class="l">누적 중개 거래액</div></div>
+      <div class="bsn-stat"><div class="n">120<span class="u">명+</span></div><div class="l">전문 중개사</div></div>
+      <div class="bsn-stat"><div class="n">17<span class="u">년</span></div><div class="l">축적된 전문성</div></div>
+      <div class="bsn-stat"><div class="n">3<span class="u">개 거점</span></div><div class="l">서울 · 부산 · 두바이</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="bsn-section">
+  <div class="bsn-wrap">
+    <div class="bsn-about-top">
+      <div class="bsn-eyebrow">ABOUT BSN</div>
+      <h2 class="bsn-h2">대한민국 빌딩 거래의 기준을 만듭니다.</h2>
+      <p class="bsn-lead">2009년 공인중개사 자격 취득으로 시작된 한 걸음이, 오늘의 BSN(빌사남) 그룹이 되었습니다.</p>
+    </div>
+    <div class="bsn-about">
+      <div class="bsn-about-img" style="background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80')"></div>
+      <div class="bsn-about-text">
+        <p><strong>국내 최초, 빌딩 실거래가 앱.</strong> 2016년, 정보의 비대칭이 일상이던 빌딩 시장에 누구나 실거래가를 확인할 수 있는 모바일 앱을 국내 최초로 출시했습니다. 시장의 기준이 그때부터 바뀌기 시작했습니다.</p>
+        <p><strong>박리다매가 아닌, 맞춤 전문 중개.</strong> 우리는 거래 건수로 경쟁하지 않습니다. 전문가 매뉴얼과 축적된 데이터를 기반으로, 고객 한 분 한 분의 자산 포트폴리오에 가장 적합한 해답을 찾습니다.</p>
+        <p><strong>하나의 그룹, 완결된 솔루션.</strong> 중개에서 끝나지 않습니다. 건축사사무소와 종합건설 면허, 자체 데이터·AI 역량까지 갖춘 그룹 구조로, 매입부터 설계·시공·운영·매각까지 모든 단계를 하나의 파트너와 완성합니다.</p>
+        <div class="bsn-quote">
+          "저는 박리다매가 아닌, 전문가 매뉴얼 기반의 맞춤 중개를 지향합니다. 편의점이 동네 구멍가게를 대체했듯, 부동산도 양이 아닌 품질로 경쟁해야 합니다."
+          <cite>— 김윤수, (주)비에스엔 대표</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DATA · AI ========== -->
+<section class="bsn-data bsn-section">
+  <div class="bsn-wrap">
+    <div class="bsn-data-top">
+      <div class="bsn-eyebrow">DATA · AI</div>
+      <h2 class="bsn-h2">감(感)이 아닌, 확실한 데이터로 움직입니다.</h2>
+    </div>
+    <div class="bsn-data-header">
+      <p class="bsn-lead" style="max-width:none">BSN은 2016년 국내 최초로 빌딩 실거래가 앱을 출시한 이래, 부동산 시장에서 가장 긴 기간의 독자적 데이터베이스를 축적해왔습니다. 이제 그 데이터 위에 AI를 더해, 더 빠르고 더 정확한 의사결정을 만듭니다.</p>
+      <div class="bsn-data-img" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80')"></div>
+    </div>
+    <div class="bsn-data-grid">
+      <div class="bsn-data-card">
+        <div class="ic">01</div>
+        <div class="body">
+          <h3>독자적 빌딩 거래 DB</h3>
+          <p>국내 최초 빌딩 실거래가 앱 운영을 통해 확보한, 업계에서 가장 깊이 있는 거래·시세·수익률 데이터베이스를 보유하고 있습니다.</p>
+        </div>
+      </div>
+      <div class="bsn-data-card">
+        <div class="ic">02</div>
+        <div class="body">
+          <h3>AI 기반 매물 분석</h3>
+          <p>입지·수익률·리스크를 자동 분석하는 AI 모델을 자체 개발. 의사결정 전에 확인해야 할 모든 숫자를 객관적으로 제공합니다.</p>
+        </div>
+      </div>
+      <div class="bsn-data-card">
+        <div class="ic">03</div>
+        <div class="body">
+          <h3>데이터 기반 투자 인사이트</h3>
+          <p>정기 발간되는 마켓 리포트와 블로그 콘텐츠로, 빌딩 투자에 필요한 데이터 해석을 누구보다 먼저 전달합니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="bsn-section" id="services">
+  <div class="bsn-wrap">
+    <div class="bsn-svc-head">
+      <div class="bsn-eyebrow">SERVICES</div>
+      <h2 class="bsn-h2">매입부터 운영까지, 하나의 파트너로.</h2>
+      <p class="bsn-lead">BSN 그룹은 빌딩 라이프사이클 전 단계를 커버하는 계열사 구조를 갖추고 있습니다. 중개에서 멈추지 않고, 설계·시공·데이터 분석까지 하나의 팀으로 움직입니다.</p>
+    </div>
+    <div class="bsn-services">
+      <div class="bsn-svc">
+        <div class="num-wrap">01</div>
+        <div>
+          <div class="num">BROKERAGE</div>
+          <h3>부동산 중개</h3>
+          <p>(주)BSN빌사남부동산중개법인 중심의 빌딩 전문 중개. 120여 명의 전문가가 서울·부산에서 활동하며, 데이터와 경험을 결합한 맞춤 솔루션을 제공합니다.</p>
+        </div>
+      </div>
+      <div class="bsn-svc">
+        <div class="num-wrap">02</div>
+        <div>
+          <div class="num">ARCHITECTURE</div>
+          <h3>건축사사무소</h3>
+          <p>매입한 자산의 가치를 극대화하는 리모델링·신축 설계. 등록 건축사사무소를 그룹이 직영 운영하여, 중개와 설계가 끊김 없이 이어집니다.</p>
+        </div>
+      </div>
+      <div class="bsn-svc">
+        <div class="num-wrap">03</div>
+        <div>
+          <div class="num">CONSTRUCTION</div>
+          <h3>종합건설</h3>
+          <p>종합건설 면허 보유. 설계에서 끝나지 않고 시공 품질까지 그룹이 책임지고 완성합니다. 하나의 파트너로 끝까지 함께합니다.</p>
+        </div>
+      </div>
+      <div class="bsn-svc">
+        <div class="num-wrap">04</div>
+        <div>
+          <div class="num">PENT</div>
+          <h3>펜트 (고급주택)</h3>
+          <p>청담동, 한남동, 성수동 등 하이엔드 주거지의 실거래 가능 매물만 모아 임대 및 매매를 제안드립니다. 안목 높은 영리치 고객님의 주거 수요를 만족시켜 드립니다.</p>
+        </div>
+      </div>
+      <div class="bsn-svc">
+        <div class="num-wrap">05</div>
+        <div>
+          <div class="num">ASSET MANAGEMENT</div>
+          <h3>자산운용</h3>
+          <p>BSN그룹과 유수의 자산운용사가 함께 빌딩 투자 펀드 상품을 운용합니다. 소액으로 빌딩 지분투자가 가능합니다.</p>
+        </div>
+      </div>
+      <div class="bsn-svc">
+        <div class="num-wrap">06</div>
+        <div>
+          <div class="num">STUDY</div>
+          <h3>빌사남 스터디</h3>
+          <p>36기 연속 조기매진, 수강생 2,000명 돌파. 빌사남 김윤수 대표와 드림팀이 만드는 꼬마빌딩 투자 종합 강의 패키지입니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OFFICES ========== -->
+<section class="bsn-offices">
+  <div class="bsn-offices-inner">
+    <div class="bsn-eyebrow" style="color:var(--sky)">OFFICES</div>
+    <h2 class="bsn-h2">서울에서 두바이까지.</h2>
+    <p class="bsn-lead">국내 주요 거점과 글로벌 네트워크로 고객님을 만나뵙겠습니다.</p>
+    <div class="bsn-office-grid">
+      <div class="bsn-office" style="background-image:url('https://images.unsplash.com/photo-1538485399081-7c8970d0d251?w=1200&q=80')">
+        <div class="content">
+          <div class="tag">HEADQUARTERS</div>
+          <h3>서울 본사</h3>
+          <p class="sub">강남구 도산대로100길 18 (청담동)<br>TEL 02-2051-2333</p>
+        </div>
+      </div>
+      <div class="bsn-office" style="background-image:url('https://images.unsplash.com/photo-1580331451062-99ff652288d7?w=1200&q=80')">
+        <div class="content">
+          <div class="tag">BRANCH</div>
+          <h3>부산 지사</h3>
+          <p class="sub">수영구 수영로665번길 22 태인빌딩 2층<br>TEL 051-731-2425</p>
+        </div>
+      </div>
+      <div class="bsn-office" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80')">
+        <div class="content">
+          <div class="tag">GLOBAL · BSN CONSULTING</div>
+          <h3>Dubai Office</h3>
+          <p class="sub">BSN Consulting · MENA 네트워크</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BLOG ========== -->
+<section class="bsn-blog">
+  <div class="bsn-wrap">
+    <div class="bsn-blog-head">
+      <div class="bsn-blog-head-text">
+        <div class="bsn-eyebrow">INSIGHTS</div>
+        <h2 class="bsn-h2">데이터로 읽는 빌딩 시장.</h2>
+        <p class="bsn-lead">빌딩 투자·시장 분석·정책 해설까지, BSN 전문가들이 직접 쓰는 인사이트를 만나보세요.</p>
+      </div>
+      <a class="bsn-blog-all" href="/블로그/">전체 글 보기 →</a>
+    </div>
+    <div class="bsn-posts" id="bsn-posts">
+      <div class="empty">최신 글을 불러오는 중…</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section class="bsn-contact">
+  <div class="bsn-wrap">
+    <div class="bsn-eyebrow">CONTACT</div>
+    <h2>지금, 가장 전문적인 파트너와 이야기하세요.</h2>
+    <p>빌딩 매매·투자·설계·시공, 모든 문의를 환영합니다. 전문 상담사가 빠르게 응답드립니다.</p>
+    <button class="bsn-contact-cta" onclick="bsnOpen()">상담 문의하기 →</button>
+    <div style="margin-top:56px;padding-top:40px;border-top:1px solid var(--line);display:flex;justify-content:center;gap:48px;flex-wrap:wrap;font-size:15px;color:var(--body)">
+      <div><strong style="color:var(--ink);font-weight:700;letter-spacing:.1em;font-size:12px;display:block;margin-bottom:6px">ADDRESS</strong>서울특별시 강남구 도산대로100길 18 (청담동)</div>
+      <div><strong style="color:var(--ink);font-weight:700;letter-spacing:.1em;font-size:12px;display:block;margin-bottom:6px">TEL</strong>02-2051-2333</div>
+      <div><strong style="color:var(--ink);font-weight:700;letter-spacing:.1em;font-size:12px;display:block;margin-bottom:6px">EMAIL</strong>bsn.building@gmail.com</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MODAL ========== -->
+<div class="bsn-modal" id="bsnModal" onclick="if(event.target===this)bsnClose()">
+  <div class="bsn-modal-box">
+    <button class="bsn-modal-close" onclick="bsnClose()" aria-label="닫기">✕</button>
+    <h3>상담 문의</h3>
+    <p class="desc">편하신 방법으로 연락 주세요.<br>전문 상담사가 빠르게 응답드립니다.</p>
+    <div class="bsn-modal-options">
+      <a class="bsn-opt bsn-opt-tel" href="tel:02-2051-2333">
+        <span class="icon">☎</span>
+        <span>
+          <span class="lab">TEL</span>
+          <span class="val">02-2051-2333</span>
+        </span>
+      </a>
+      <a class="bsn-opt bsn-opt-kakao" href="http://pf.kakao.com/_Ugaxcu" target="_blank" rel="noopener">
+        <span class="icon">💬</span>
+        <span>
+          <span class="lab">KAKAOTALK</span>
+          <span class="val">빌사남 채널 친구추가</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+function bsnOpen(){document.getElementById('bsnModal').classList.add('open');document.body.style.overflow='hidden'}
+function bsnClose(){document.getElementById('bsnModal').classList.remove('open');document.body.style.overflow=''}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')bsnClose()});
+
+// 최신 블로그 3개 자동 로드
+(function(){
+  fetch('/wp-json/wp/v2/posts?per_page=3&_embed=1')
+    .then(function(r){return r.json()})
+    .then(function(posts){
+      var box = document.getElementById('bsn-posts');
+      if(!posts || !posts.length){
+        box.innerHTML = '<div class="empty">곧 첫 번째 인사이트를 발행합니다.</div>';
+        return;
+      }
+      box.innerHTML = posts.map(function(p){
+        var img = (p._embedded && p._embedded['wp:featuredmedia'] && p._embedded['wp:featuredmedia'][0] && p._embedded['wp:featuredmedia'][0].source_url) || 'https://images.unsplash.com/photo-1460472178825-e5240623afd5?w=800&q=80';
+        var d = new Date(p.date);
+        var date = d.getFullYear()+'.'+String(d.getMonth()+1).padStart(2,'0')+'.'+String(d.getDate()).padStart(2,'0');
+        var excerpt = (p.excerpt && p.excerpt.rendered ? p.excerpt.rendered : '').replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim();
+        return '<a class="bsn-post" href="'+p.link+'">'
+          + '<div class="img" style="background-image:url(\''+img+'\')"></div>'
+          + '<div class="txt">'
+          +   '<div class="date">'+date+'</div>'
+          +   '<h4>'+p.title.rendered+'</h4>'
+          +   '<p>'+excerpt+'</p>'
+          + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function(){
+      document.getElementById('bsn-posts').innerHTML = '<div class="empty">곧 첫 번째 인사이트를 발행합니다.</div>';
+    });
+})();
+</script>
+
+</div>
+<!-- /wp:html -->
