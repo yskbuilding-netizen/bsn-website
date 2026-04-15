@@ -241,7 +241,7 @@
 <section class="bsn-stats">
   <div class="bsn-wrap">
     <div class="bsn-stats-grid">
-      <div class="bsn-stat"><div class="n"><span class="count-up" data-target="4.3" data-decimal="1">0</span><span class="u" data-ko="조+" data-en="T KRW+" data-ar="+تريليون">조+</span></div><div class="l" data-ko="누적 중개 거래액" data-en="Cumulative Transactions" data-ar="إجمالي المعاملات">누적 중개 거래액</div></div>
+      <div class="bsn-stat"><div class="n"><span class="count-up" data-target="4.3" data-decimal="1" data-target-en="3.2" data-target-ar="3.2">0</span><span class="u" data-ko="조+" data-en="B$+" data-ar="+B$">조+</span></div><div class="l" data-ko="누적 중개 거래액" data-en="Cumulative Transactions" data-ar="إجمالي المعاملات">누적 중개 거래액</div></div>
       <div class="bsn-stat"><div class="n"><span class="count-up" data-target="120">0</span><span class="u" data-ko="명+" data-en="+" data-ar="+">명+</span></div><div class="l" data-ko="전문 중개사" data-en="Expert Agents" data-ar="وكلاء متخصصون">전문 중개사</div></div>
       <div class="bsn-stat"><div class="n"><span class="count-up" data-target="17">0</span><span class="u" data-ko="년" data-en="Yrs" data-ar="سنة">년</span></div><div class="l" data-ko="축적된 전문성" data-en="Years of Expertise" data-ar="سنوات من الخبرة">축적된 전문성</div></div>
       <div class="bsn-stat"><div class="n"><span class="count-up" data-target="3">0</span><span class="u" data-ko="개 거점" data-en=" Offices" data-ar=" مكاتب">개 거점</span></div><div class="l" data-ko="서울 · 부산 · 두바이" data-en="Seoul · Busan · Dubai" data-ar="سيول · بوسان · دبي">서울 · 부산 · 두바이</div></div>
@@ -583,6 +583,31 @@ function bsnLang(lang) {
     } else {
       el.innerHTML = val;
     }
+  });
+  // 카운트업 숫자 전환 (달러 등)
+  document.querySelectorAll('.count-up').forEach(function(el){
+    var newTarget = el.getAttribute('data-target-'+lang);
+    if (newTarget) {
+      el.dataset.target = newTarget;
+      el.dataset.decimal = newTarget.includes('.') ? '1' : '0';
+    } else {
+      // 기본값 복원 (한국어)
+      if (lang === 'ko') { el.dataset.target = '4.3'; el.dataset.decimal = '1'; }
+    }
+    el.textContent = '0';
+    // 다시 애니메이션
+    var target = parseFloat(el.dataset.target);
+    var decimal = parseInt(el.dataset.decimal) || 0;
+    var startTime = null;
+    function easeOut(t){return 1-Math.pow(1-t,3)}
+    function step(ts){
+      if(!startTime)startTime=ts;
+      var p=Math.min((ts-startTime)/2000,1);
+      var c=target*easeOut(p);
+      el.textContent=decimal>0?c.toFixed(decimal):Math.floor(c);
+      if(p<1)requestAnimationFrame(step);else el.textContent=decimal>0?target.toFixed(decimal):target;
+    }
+    requestAnimationFrame(step);
   });
 }
 
