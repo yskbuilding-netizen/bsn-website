@@ -537,7 +537,7 @@
         <h2 class="bsn-h2" data-ko="데이터로 읽는 빌딩 시장." data-en="The Building Market, Read Through Data." data-ar="سوق العقارات من خلال البيانات.">데이터로 읽는 빌딩 시장.</h2>
         <p class="bsn-lead" data-ko="빌딩 투자·시장 분석·정책 해설까지, BSN 전문가들이 직접 쓰는 인사이트를 만나보세요." data-en="From building investment to market analysis and policy commentary — insights written directly by BSN experts." data-ar="من الاستثمار العقاري إلى تحليل السوق والسياسات — رؤى يكتبها خبراء BSN مباشرة.">빌딩 투자·시장 분석·정책 해설까지, BSN 전문가들이 직접 쓰는 인사이트를 만나보세요.</p>
       </div>
-      <a class="bsn-blog-all" href="/블로그/" data-ko="전체 글 보기 →" data-en="View All Posts →" data-ar="← عرض كل المقالات">전체 글 보기 →</a>
+      <a class="bsn-blog-all" href="https://buildingpartner.co.kr/블로그/" target="_blank" data-ko="전체 글 보기 →" data-en="View All Posts →" data-ar="← عرض كل المقالات">전체 글 보기 →</a>
     </div>
     <div class="bsn-posts" id="bsn-posts">
       <div class="empty">최신 글을 불러오는 중…</div>
@@ -601,7 +601,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')bsnClose()})
 
 // 최신 블로그 3개 자동 로드
 (function(){
-  fetch('/wp-json/wp/v2/posts?per_page=3&_embed=1')
+  fetch('https://buildingpartner.co.kr/wp-json/wp/v2/posts?per_page=3&_embed=1')
     .then(function(r){return r.json()})
     .then(function(posts){
       var box = document.getElementById('bsn-posts');
